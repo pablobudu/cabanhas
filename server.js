@@ -1,12 +1,12 @@
 import express from 'express'
-import { append } from 'express/lib/response'
+const app = express()
 import router from './routes/routes.js'
 const rutas = router
-append.use(router)
+app.use(router)
 
 
 
-append.listen(3000, ()=>{
+app.listen(3000, ()=>{
   console.log('Listen 3000');
 })
 
